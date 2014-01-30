@@ -1,0 +1,3 @@
+content	asnumber	jar:chrome/asnumber.jar!/content/
+
+overlay	chrome://browser/content/browser.xul	chrome://asnumber/content/asnumberOverlay.xul

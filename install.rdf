@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+<Description about="urn:mozilla:install-manifest">
+	<em:id>asnumber@networx.ch</em:id>
+	<em:name>ASnumber</em:name>
+	<em:version>1.6</em:version>
+	<em:description>Fetches AS Number routing information on every visited Webserver</em:description>
+	<em:creator>Internet Business Solutions AG</em:creator>
+	<em:optionsURL>chrome://asnumber/content/asnumberSettings.xul</em:optionsURL>
+	<em:iconURL>chrome://asnumber/content/logo.png</em:iconURL>
+	<em:homepageURL>http://www.asnumber.networx.ch/</em:homepageURL>
+	<em:type>2</em:type>
+
+	<em:targetApplication>
+		<Description>
+			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+			<em:minVersion>1.5</em:minVersion>
+			<em:maxVersion>3.6.*</em:maxVersion>
+		</Description>
+	</em:targetApplication>
+</Description>
+
+</RDF>

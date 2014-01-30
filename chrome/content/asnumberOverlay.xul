@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://asnumber/content/asnumber.css" type="text/css"?>
+
+<overlay id="asnumber-overlay"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://asnumber/content/asnumberOverlay.js" />
+	<script type="application/x-javascript" src="chrome://asnumber/content/asnumberSettings.js" />
+	
+	<statusbar id="status-bar">
+		<statusbarpanel
+			id="asnumber-status"
+			insertafter="statusbarpanel-updates"
+			context="asnumber-contextmenu"
+			collapsed="false"
+			persist="collapsed"
+			popup="asnumber-panel"
+			tooltip="asnumber-status-tooltip">
+
+			<label id="asnumber-statusbar-label" value="AS n/a" onclick="if(event.button == 0) ASNLoadWhois('click')"/>
+			
+			<menupopup id="asnumber-contextmenu" tooltiptext="">
+        <menuitem id="asnumber-context-enable" label="Enable ASnumber" type="checkbox" oncommand="ASNSwitchEnable()"/>
+        <menuitem id="asnumber-context-load" label="Get AS for this site" oncommand="ASNGetNow()"/>
+        <menuitem id="asnumber-context-settings" label="Settings..." oncommand="ASNShowSettings()"/>
+        <menuseparator/>
+        <menuitem id="asnumber-context-whois" label="Whois Lookup" oncommand="ASNLoadWhois('')"/>
+        <menuitem id="asnumber-context-clipboard" label="Copy to clipboard" oncommand="ASNCopyToClipboard()"/>
+      </menupopup>
+
+      <tooltip id="asnumber-status-tooltip" noautohide="true" orient="horizontal" position="before_end"></tooltip>
+<!--
+      <panel id="asnumber-panel" position="before_end" tooltiptext="">
+        <box id="asnumber-panel-content"/>
+        <grid>
+          <columns>
+            <column/>
+            <column/>
+          </columns>
+          <rows>
+            <row align="center">
+              <button label="Copy to clipboard" oncommand="ASNCopyToClipboard()"/>
+              <button label="Whois Lookup" oncommand="ASNLoadWhois('')"/>
+            </row>
+          </rows>
+        </grid>
+      </panel>
+-->
+		</statusbarpanel>
+	</statusbar>
+</overlay>

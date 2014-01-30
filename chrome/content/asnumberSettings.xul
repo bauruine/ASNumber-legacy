@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<dialog id="asnumber-settings"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="ASnumber Settings"
+	buttons="accept,cancel"
+	ondialogaccept="return ASNSaveSettings()"
+	ondialogcancel="return true;"
+	onload="ASNLoadSettings()">
+
+<script type="application/x-javascript" src="chrome://asnumber/content/asnumberSettings.js"/>
+
+<vbox flex="1" width="300">
+<hbox flex="1">
+<tabbox flex="1">
+	<tabs>
+		<tab label="Options"/>
+		<tab label="Whois"/>
+		<tab label="Privacy"/>
+		<tab label="About"/>
+	</tabs>
+	<tabpanels>
+		<tabpanel id="asnumber-options-tab">
+			<vbox flex="1">
+			<groupbox>
+				<caption label="ASnumber Resolving Server"/>
+				<description>Select an AS resolve server below</description>
+				<menulist id="asnumber-options-server">
+					<menupopup id="asnumber-options-server-selection">
+						<menuitem label="ASNumber European Server" value="eu.asnumber.networx.ch" selected="true"/>
+						<menuitem label="ASNumber USA Server" value="us.asnumber.networx.ch"/>
+						<menuitem label="ASNumber Asia-Pacific Server" value="ap.asnumber.networx.ch"/>
+					</menupopup>
+				</menulist>
+			</groupbox>
+			<groupbox>
+				<caption label="DNS Resolver"/>
+				<description>How to resolve hostnames</description>
+				<radiogroup id="asnumber-options-dns">
+					<radio id="asnumber-options-sync" value="sync" label="Synchronously"/>
+					<radio id="asnumber-options-async" value="async" label="Asynchronously *"/>
+					<hbox>
+						<spacer style="width: 2em"/>
+						<description>* Tends to crash the browser</description>
+					</hbox>
+				</radiogroup>
+			</groupbox>
+			</vbox>
+		</tabpanel>
+		<tabpanel id="asnumber-whois-tab">
+			<vbox flex="1">
+				<groupbox>
+					<caption label="Window open behavior"/>
+					<radiogroup id="asnumber-whois-open" oncommand="ASNCheckWhoisOpen();">
+						<radio id="asnumber-whois-open-window" value="window" label="Open Whois request in a new window"/>
+						<radio id="asnumber-whois-open-tab" value="tab" label="Open Whois request in a new tab"/>
+						<hbox>
+							<spacer style="width: 3em"/>
+							<checkbox id="asnumber-whois-open-tab-foreground" label="Open new tab in foreground"/>
+						</hbox>
+					</radiogroup>
+				</groupbox>
+				<groupbox>
+					<caption label="Accessibility"/>
+					<checkbox id="asnumber-whois-fast-access" label="Whois lookup with left click on status bar"/>
+				</groupbox>
+			</vbox>
+		</tabpanel>
+		<tabpanel id="asnumber-privacy-tab">
+			<vbox style="text-align: left" flex="1">
+				<spacer flex="1"/>
+				<label value="The extension transmits the IP address" style="font-weight: bold"/>
+				<label value="of the server of every website visited." style="font-weight: bold"/>
+				<spacer flex="1"/>
+				<label value="No cookies are set or read from the ASNumber server"/>
+				<label value="and no per-user or browser tracking or logging is done."/>
+				<label value="Only aggregated statistics on the popularity of the"/>
+				<label value="the looked up AS Numbers are computed."/>
+				<label value="No information is made available to third parties."/>
+				<spacer flex="1"/>
+			</vbox>
+		</tabpanel>
+		<tabpanel id="asnumber-about-tab">
+			<vbox style="text-align: center" flex="1">
+				<spacer flex="1"/>
+				<label value="ASnumber Version 1.6" style="font-weight: bold"/>
+				<label value="20100311"/>
+				<spacer flex="1"/>
+				<label value="http://www.asnumber.networx.ch" class="text-link" style="font-weight: bold; -moz-user-focus: ignore;" href="http://www.asnumber.networx.ch"/>
+				<spacer flex="1"/>
+				<label value="A service by"/>
+				<spacer flex="1"/>
+				<label value="Internet Business Solutions AG"/>
+				<label value="Hardstrasse 235"/>
+				<label value="CH 8005 Zurich"/>
+				<label value="Switzerland"/>
+				<spacer flex="1"/>
+				<label value="BGP Experts, Traffic &amp; Network Engineering Gurus"/>
+				<spacer flex="1"/>
+				<label value="http://www.networx.ch" class="text-link" style="-moz-user-focus: ignore;" href="http://www.networx.ch"/>
+				<spacer flex="1"/>
+			</vbox>
+		</tabpanel>
+	</tabpanels>
+</tabbox>
+</hbox>
+
+</vbox>
+
+</dialog>

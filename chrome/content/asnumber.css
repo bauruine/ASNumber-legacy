@@ -1,0 +1,39 @@
+/*
+tooltip#asnumber-status-tooltip {
+	padding: 1px 3px 1px 3px;
+	margin: 0;
+}
+*/
+
+#asnumber-panel {
+  background-color: white;
+}
+
+.asinfo {
+	padding-left: 0px;
+}
+
+.asinfo .title {
+	font-weight: bold;
+	margin-left: 0px;
+}
+
+.asinfo table {
+	padding-left: 8px;
+	margin: 0px;
+	border: 0;
+}
+
+.asinfo table tr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.asinfo table tr td {
+	padding: 0;
+	padding-right: 1px;
+	vertical-align: top;
+	margin: 0;
+	border: 0;
+}
