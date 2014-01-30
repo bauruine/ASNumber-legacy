@@ -575,7 +575,7 @@ function ASNLoadWhois(s) {
 	var url = '';
 
 	if (db == 'ARIN')
-		url = "http://ws.arin.net/cgi-bin/whois.pl?queryinput=" + ASNCurrentASNumber.getAS();
+		url = "http://whois.arin.net/rest/asn/" + ASNCurrentASNumber.getAS() + "/pft";
 	else
 		url = "http://www.ripe.net/fcgi-bin/whois?form_type=advanced&full_query_string=&searchtext=" + ASNCurrentASNumber.getAS() + "&inverse_attributes=None&ip_search_lvl=Default%28nearest+match%29&alt_database=" + db + "&object_type=aut-num&filter_mail=ON";
 
