@@ -26,6 +26,7 @@
         <menuitem id="asnumber-context-settings" label="Settings..." oncommand="ASNShowSettings()"/>
         <menuseparator/>
         <menuitem id="asnumber-context-whois" label="Whois Lookup" oncommand="ASNLoadWhois('')"/>
+        <menuitem id="asnumber-context-whois" label="bgp.he.net" oncommand="ASNBgpHeNet('')"/>
         <menuitem id="asnumber-context-clipboard" label="Copy to clipboard" oncommand="ASNCopyToClipboard()"/>
       </menupopup>
 

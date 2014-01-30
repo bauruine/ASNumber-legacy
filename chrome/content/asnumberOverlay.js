@@ -585,6 +585,34 @@ function ASNLoadWhois(s) {
 		try {
 			ASNTab.linkedBrowser.loadURI(url, null, null);
 		} catch(e) {
+			ASNTab = getBrowser().addTab(url, null, null, null);
+		}
+
+		if (ASNOpenForeground == true)
+			getBrowser().selectedTab = ASNTab;
+		else
+			getBrowser().selectedTab = oldtab;
+	} else
+		window.open(url);
+}
+
+function ASNBgpHeNet(s) {
+	if (ASNCurrentASNumber == null)
+		return;
+
+	if (s == 'click' && ASNFastAccess == false)
+		return;
+
+	var url = '';
+
+		url = "http://bgp.he.net/" + ASNCurrentASNumber.getAS();
+
+	if (ASNOpenTabs == true) {
+		var oldtab = getBrowser().selectedTab;
+
+		try {
+			ASNTab.linkedBrowser.loadURI(url, null, null);
+		} catch(e) {
 			ASNTab = getBrowser().addTab(url, null, null, null);				
 		}
 
