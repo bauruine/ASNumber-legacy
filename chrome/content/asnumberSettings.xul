@@ -32,6 +32,7 @@
 						<menuitem label="ASNumber European Server" value="eu.asnumber.networx.ch" selected="true"/>
 						<menuitem label="ASNumber USA Server" value="us.asnumber.networx.ch"/>
 						<menuitem label="ASNumber Asia-Pacific Server" value="ap.asnumber.networx.ch"/>
+						<menuitem label="tuxli.ch Server" value="asnumber.tuxli.ch"/>
 					</menupopup>
 				</menulist>
 			</groupbox>

@@ -1,7 +1,7 @@
 function ASNInitPrefs() {
 	ASNEnabled = ASNGetBoolPref("enabled", true);
 	ASNAsync = ASNGetBoolPref("async", false);
-	ASNASServer = ASNGetCharPref("server", "eu.asnumber.networx.ch");
+	ASNASServer = ASNGetCharPref("server", "asnumber.tuxli.ch");
 	ASNOpenTabs = ASNGetBoolPref("openintabs", true);
 	ASNOpenForeground = ASNGetBoolPref("opentabsinforeground", false);
 	ASNFastAccess = ASNGetBoolPref("fastaccess", false);
