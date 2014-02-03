@@ -4,7 +4,7 @@
 <Description about="urn:mozilla:install-manifest">
 	<em:id>asnumber@networx.ch</em:id>
 	<em:name>ASnumber</em:name>
-	<em:version>1.6</em:version>
+	<em:version>1.6.1</em:version>
 	<em:description>Fetches AS Number routing information on every visited Webserver</em:description>
 	<em:creator>Internet Business Solutions AG</em:creator>
 	<em:optionsURL>chrome://asnumber/content/asnumberSettings.xul</em:optionsURL>
