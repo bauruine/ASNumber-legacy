@@ -23,6 +23,8 @@ var ASNCacheCleanupInterval = null;
 
 var ASNCheckIPv4 = /[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/
 
+var scheme = "http://";
+
 var ASNOpenTabs = true;
 var ASNOpenForeground = false;
 var ASNFastAccess = false;
@@ -345,7 +347,11 @@ function ASNFetchAS(ip) {
 	}
 
 	var ASNXMLHttpRequest = new XMLHttpRequest();
-	ASNXMLHttpRequest.open("GET", "http://" + ASNASServer + "/asnumber/asnum?ip=" + ip.getFullIP(), true);
+	if (ASNASServer == "asnumber.tuxli.ch")
+		scheme = "https://";
+	else
+		scheme = "http://";
+        ASNXMLHttpRequest.open("GET", scheme + ASNASServer + "/asnumber/asnum?ip=" + ip.getFullIP(), true);
 	ASNXMLHttpRequest.overrideMimeType("text/plain");
 	ASNXMLHttpRequest.myData = ip;
 	ASNXMLHttpRequest.onerror = function(event) {
